@@ -58,10 +58,8 @@
 						<div class="right-element">
 							<a href="login.php" class="user-account for-buy"><i
 									class="icon icon-user"></i><span>Account</span></a>
-									<a href="cartpro.php">
-                                        <span><i class="fa fa-shopping-cart" aria-hidden="true"><?php echo count($cart);?></i></span>
-                                        <span id="checkout_items" class="checkout_items"></span>
-                                    </a>
+									<a href="cartpro.php" class="cart for-buy"><i class="icon icon-clipboard"></i><span>
+									</span></a>
 
 							<div class="action-menu">
 
@@ -104,15 +102,11 @@
 										<a href="#pages" class="nav-link">Pages</a>
 
 										<ul>
-											<li class="active"><a href="index.html">Home</a></li>
-											<li><a href="about.html">About</a></li>
-											<li><a href="index.html">Styles</a></li>
-											<li><a href="index.html">Blog</a></li>
-											<li><a href="index.html">Post Single</a></li>
-											<li><a href="index.html">Our Store</a></li>
-											<li><a href="index.html">Product Single</a></li>
-											<li><a href="index.html">Contact</a></li>
-											<li><a href="index.html">Thank You</a></li>
+											<li class="active"><a href="index.php">Home</a></li>
+											<li><a href="about.php">About</a></li>
+											
+											<li><a href="contact.php">Contact</a></li>
+											
 										</ul>
 
 									</li>
@@ -154,11 +148,9 @@
 						<div class="slider-item">
 							<div class="banner-content">
 								<h2 class="banner-title">Life of the Wild</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero
-									ipsum enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis
-									urna, a eu.</p>
+								<p>"Life of the Wild" takes you on a journey through nature’s untamed beauty, exploring the resilience and harmony of wildlife. Discover the hidden wonders of forests, mountains, and rivers. A captivating read for nature lovers and adventurers alike.</p>
 								<div class="btn-wrap">
-									<a href="#" class="btn btn-outline-accent btn-accent-arrow">Read More<i
+									<a href="http://localhost:8888/product.php?id=35" class="btn btn-outline-accent btn-accent-arrow">Read More<i
 											class="icon icon-ns-arrow-right"></i></a>
 								</div>
 							</div><!--banner-content-->
@@ -168,11 +160,9 @@
 						<div class="slider-item">
 							<div class="banner-content">
 								<h2 class="banner-title">Birds gonna be Happy</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero
-									ipsum enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis
-									urna, a eu.</p>
+								<p>"Life of the Wild" takes you on a journey through nature’s untamed beauty, exploring the resilience and harmony of wildlife. Discover the hidden wonders of forests, mountains, and rivers. A captivating read for nature lovers and adventurers alike.</p>
 								<div class="btn-wrap">
-									<a href="#" class="btn btn-outline-accent btn-accent-arrow">Read More<i
+									<a href="http://localhost:8888/product.php?id=36" class="btn btn-outline-accent btn-accent-arrow">Read More<i
 											class="icon icon-ns-arrow-right"></i></a>
 								</div>
 							</div><!--banner-content-->
@@ -228,8 +218,10 @@
 								<div class="product-item">
 									<figure class="product-style">
 										<img src="images/product-item1.jpg" alt="Books" class="product-item">
-										<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
-											Cart</button>
+										<a href="http://localhost:8888/product.php?id=31">
+											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+											</button>
+										</a>	
 									</figure>
 									<figcaption>
 										<h3>Simple way of piece life</h3>
@@ -243,8 +235,10 @@
 								<div class="product-item">
 									<figure class="product-style">
 										<img src="images/product-item2.jpg" alt="Books" class="product-item">
-										<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
-											Cart</button>
+										<a href="http://localhost:8888/product.php?id=32">
+											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+											</button>
+										</a>	
 									</figure>
 									<figcaption>
 										<h3>Great travel at desert</h3>
@@ -258,8 +252,10 @@
 								<div class="product-item">
 									<figure class="product-style">
 										<img src="images/product-item3.jpg" alt="Books" class="product-item">
-										<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
-											Cart</button>
+										<a href="http://localhost:8888/product.php?id=33">
+											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+											</button>
+										</a>	
 									</figure>
 									<figcaption>
 										<h3>The lady beauty Scarlett</h3>
@@ -273,8 +269,10 @@
 								<div class="product-item">
 									<figure class="product-style">
 										<img src="images/product-item4.jpg" alt="Books" class="product-item">
-										<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
-											Cart</button>
+										<a href="http://localhost:8888/product.php?id=34">
+											<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+											</button>
+										</a>	
 									</figure>
 									<figcaption>
 										<h3>Once upon a time</h3>
@@ -295,7 +293,7 @@
 				<div class="col-md-12">
 
 					<div class="btn-wrap align-right">
-						<a href="#" class="btn-accent-arrow">View all products <i
+						<a href="http://localhost:8888/store.php?category_id=1" class="btn-accent-arrow">View all products <i
 								class="icon icon-ns-arrow-right"></i></a>
 					</div>
 
@@ -326,11 +324,10 @@
 								<div class="products-content">
 									<div class="author-name">By Timbur Hood</div>
 									<h3 class="item-title">Birds gonna be happy</h3>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet,
-										libero ipsum enim pharetra hac.</p>
+									<p>Birds Gonna Be Happy – Free birds soaring across the sky, embracing the simple joys of life. A story of freedom, happiness, and endless adventures.</p>
 									<div class="item-price">$ 45.00</div>
 									<div class="btn-wrap">
-										<a href="#" class="btn-accent-arrow">shop it now <i
+										<a href="http://localhost:8888/product.php?id=36" class="btn-accent-arrow">shop it now <i
 												class="icon icon-ns-arrow-right"></i></a>
 									</div>
 								</div>
@@ -376,9 +373,10 @@
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item1.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart"
-												data-product-tile="add-to-cart">Review Book
-												Cart</button>
+											<a href="http://localhost:8888/product.php?id=37">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+												</button>
+											</a>	
 										</figure>
 										<figcaption>
 											<h3>Portrait photography</h3>
@@ -392,9 +390,10 @@
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item2.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart"
-												data-product-tile="add-to-cart">Review Book
-												Cart</button>
+											<a href="http://localhost:8888/product.php?id=34">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+												</button>
+											</a>	
 										</figure>
 										<figcaption>
 											<h3>Once upon a time</h3>
@@ -408,9 +407,10 @@
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item3.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart"
-												data-product-tile="add-to-cart">Review Book
-												Cart</button>
+											<a href="http://localhost:8888/product.php?id=38">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+												</button>
+											</a>	
 										</figure>
 										<figcaption>
 											<h3>Tips of simple lifestyle</h3>
@@ -424,9 +424,10 @@
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item4.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart"
-												data-product-tile="add-to-cart">Review Book
-												Cart</button>
+											<a href="http://localhost:8888/product.php?id=39">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+												</button>
+											</a>	
 										</figure>
 										<figcaption>
 											<h3>Just felt from outside</h3>
@@ -443,9 +444,10 @@
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item5.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart"
-												data-product-tile="add-to-cart">Review Book
-												Cart</button>
+											<a href="http://localhost:8888/product.php?id=40">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+												</button>
+											</a>	
 										</figure>
 										<figcaption>
 											<h3>Peaceful Enlightment</h3>
@@ -459,9 +461,10 @@
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item6.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart"
-												data-product-tile="add-to-cart">Review Book
-												Cart</button>
+											<a href="http://localhost:8888/product.php?id=32">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+												</button>
+											</a>	
 										</figure>
 										<figcaption>
 											<h3>Great travel at desert</h3>
@@ -475,9 +478,10 @@
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item7.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart"
-												data-product-tile="add-to-cart">Review Book
-												Cart</button>
+											<a href="http://localhost:8888/product.php?id=41">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+												</button>
+											</a>	
 										</figure>
 										<figcaption>
 											<h3>Life among the pirates</h3>
@@ -491,9 +495,10 @@
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item8.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart"
-												data-product-tile="add-to-cart">Review Book
-												Cart</button>
+											<a href="http://localhost:8888/product.php?id=31">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+												</button>
+											</a>	
 										</figure>
 										<figcaption>
 											<h3>Simple way of piece life</h3>
@@ -512,9 +517,10 @@
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item2.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart"
-												data-product-tile="add-to-cart">Review Book
-												Cart</button>
+											<a href="http://localhost:8888/product.php?id=40">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+												</button>
+											</a>	
 										</figure>
 										<figcaption>
 											<h3>Peaceful Enlightment</h3>
@@ -528,9 +534,10 @@
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item4.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart"
-												data-product-tile="add-to-cart">Review Book
-												Cart</button>
+											<a href="http://localhost:8888/product.php?id=32">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+												</button>
+											</a>	
 										</figure>
 										<figcaption>
 											<h3>Great travel at desert</h3>
@@ -544,9 +551,10 @@
 									<div class="product-item">
 										<figure class="product-style">
 											<img src="images/tab-item6.jpg" alt="Books" class="product-item">
-											<button type="button" class="add-to-cart"
-												data-product-tile="add-to-cart">Review Book
-												Cart</button>
+											<a href="http://localhost:8888/product.php?id=34">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+												</button>
+											</a>	
 										</figure>
 										<figcaption>
 											<h3>Life among the pirates</h3>
@@ -819,12 +827,14 @@
 							<div class="product-item">
 								<figure class="product-style">
 									<img src="images/product-item5.jpg" alt="Books" class="product-item">
-									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
-										Cart</button>
+									<a href="http://localhost:8888/product.php?id=42">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+												</button>
+											</a>	
 								</figure>
 								<figcaption>
-									<h3>Simple way of piece life</h3>
-									<span>Armor Ramsey</span>
+									<h3>Way of Happiness.</h3>
+									<span>Anada Kuma</span>
 									<div class="item-price">
 										<span class="prev-price">$ 50.00</span>$ 40.00
 									</div>
@@ -834,12 +844,14 @@
 							<div class="product-item">
 								<figure class="product-style">
 									<img src="images/product-item6.jpg" alt="Books" class="product-item">
-									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
-										Cart</button>
+									<a href="http://localhost:8888/product.php?id=43">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+												</button>
+											</a>	
 								</figure>
 								<figcaption>
-									<h3>Great travel at desert</h3>
-									<span>Sanchit Howdy</span>
+									<h3>Life of Seacrits</h3>
+									<span>Galista Marie</span>
 									<div class="item-price">
 										<span class="prev-price">$ 30.00</span>$ 38.00
 									</div>
@@ -849,12 +861,14 @@
 							<div class="product-item">
 								<figure class="product-style">
 									<img src="images/product-item7.jpg" alt="Books" class="product-item">
-									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
-										Cart</button>
+									<a href="http://localhost:8888/product.php?id=44">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+												</button>
+											</a>	
 								</figure>
 								<figcaption>
-									<h3>The lady beauty Scarlett</h3>
-									<span>Arthur Doyle</span>
+									<h3>Fashion System</h3>
+									<span>Kevin Spear</span>
 									<div class="item-price">
 										<span class="prev-price">$ 35.00</span>$ 45.00
 									</div>
@@ -864,12 +878,14 @@
 							<div class="product-item">
 								<figure class="product-style">
 									<img src="images/product-item8.jpg" alt="Books" class="product-item">
-									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
-										Cart</button>
+									<a href="http://localhost:8888/product.php?id=45">
+												<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Review Book
+												</button>
+											</a>	
 								</figure>
 								<figcaption>
-									<h3>Once upon a time</h3>
-									<span>Klien Marry</span>
+									<h3>MUSICAL</h3>
+									<span>KARIM ACHARD</span>
 									<div class="item-price">
 										<span class="prev-price">$ 25.00</span>$ 35.00
 									</div>
@@ -912,15 +928,15 @@
 						<div class="col-md-6">
 
 							<div class="subscribe-content" data-aos="fade-up">
-								<p>Sed eu feugiat amet, libero ipsum enim pharetra hac dolor sit amet, consectetur. Elit
-									adipiscing enim pharetra hac.</p>
-								<form id="form">
-									<input type="text" name="email" placeholder="Enter your email addresss here">
-									<button class="btn-subscribe">
-										<span>send</span>
+								<p>Don't miss the latest updates! Subscribe now to receive exclusive news, exciting offers, and inspiring content delivered straight to your inbox. Be the first to discover amazing things!</p>
+								<form id="form" action="/thankyou.php" method="POST">
+									<input type="text" name="email" placeholder="Enter your email address here" required>
+									<button type="submit" class="btn-subscribe">
+										<span>Send</span>
 										<i class="icon icon-send"></i>
 									</button>
 								</form>
+
 							</div>
 
 						</div>
@@ -958,7 +974,7 @@
 
 								<div class="post-item">
 									<div class="meta-date">Mar 30, 2021</div>
-									<h3><a href="#">Reading books always makes the moments happy</a></h3>
+									<h3><a href="#">Reading books always makes the moments happy :Explore New Worlds</a></h3>
 
 									<div class="links-element">
 										<div class="categories">inspiration</div>
@@ -991,7 +1007,7 @@
 								</figure>
 								<div class="post-item">
 									<div class="meta-date">Mar 29, 2021</div>
-									<h3><a href="#">Reading books always makes the moments happy</a></h3>
+									<h3><a href="#">Reading books always makes the moments happy :Boost Your Imagination</a></h3>
 
 									<div class="links-element">
 										<div class="categories">inspiration</div>
@@ -1024,7 +1040,7 @@
 								</figure>
 								<div class="post-item">
 									<div class="meta-date">Feb 27, 2021</div>
-									<h3><a href="#">Reading books always makes the moments happy</a></h3>
+									<h3><a href="#">Reading books always makes the moments happy :Gain Knowledge </a></h3>
 
 									<div class="links-element">
 										<div class="categories">inspiration</div>
@@ -1079,9 +1095,7 @@
 						<div class="col-md-7">
 							<div class="app-info">
 								<h2 class="section-title divider">Download our app now !</h2>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sed ptibus
-									liberolectus nonet psryroin. Amet sed lorem posuere sit iaculis amet, ac urna.
-									Adipiscing fames semper erat ac in suspendisse iaculis.</p>
+								<p>Download our app now and enjoy a seamless experience at your fingertips! Get exclusive features, special deals, and real-time updates anytime, anywhere. Don’t miss out—start exploring today!</p>
 								<div class="google-app">
 									<img src="images/google-play.jpg" alt="google play">
 									<img src="images/app-store.jpg" alt="app store">

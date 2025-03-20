@@ -39,6 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $items = getCartItems();
 }
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,7 +72,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <!-- Left -->
             <div class="col-lg-9">
             <div class="card mb-4">
-                            <div class="card-header py-3">
+                            <div class="card-header bg-primary text-white py-3">
                                 <h5 class="mb-0">Shopping Cart</h5>
                             </div>
                             <div class="card-body">
@@ -163,7 +164,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="form-check w-100 collapsed" data-bs-toggle="collapse" data-bs-target="#collapseCC" aria-expanded="false">
                       <input class="form-check-input" type="radio" name="payment_method" value="COD" id="payment1">
                       <label class="form-check-label pt-1" for="payment1">
-                        COD
+                      
+
                       </label>
                     </div>
                     <span>
@@ -207,7 +209,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             </div>
             <!-- Right -->
             <div class="col-lg-3">
-              <div class="mb-4 p-4 bg-light text-dark rounded">
+              <div class="mb-4 p-4 bg-light text-black rounded">
                   <h4 class="mb-3">Total</h4>
                   <ul class="list-unstyled mb-0">
                       <li class="d-flex justify-content-between py-3 border-bottom"><strong class="text-muted">Total</strong><strong><?php echo $grand_total;?> $</strong></li>
@@ -233,4 +235,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <script src="plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
     <script src="plugins/easing/easing.js"></script>
     <script src="js/custom.js"></script>
+    
+    
 </body>

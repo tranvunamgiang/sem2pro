@@ -49,10 +49,10 @@
                     </div>
                     <div class="col-md-6">
                         <div class="right-element">
-                            <a href="login.html" class="user-account for-buy"><i
+                            <a href="login.php" class="user-account for-buy"><i
                                     class="icon icon-user"></i><span>Account</span></a>
-                            <a href="#" class="cart for-buy"><i class="icon icon-clipboard"></i><span>Cart:(0
-                                    $)</span></a>
+                            <a href="#" class="cart for-buy"><i class="icon icon-clipboard"></i><span>Cart
+                                    </span></a>
 
                             <div class="action-menu">
 
@@ -80,7 +80,7 @@
 
                     <div class="col-md-2">
                         <div class="main-logo">
-                            <a href="index.html"><img src="images/BookStore .png" alt="logo"></a>
+                            <a href="index.php"><img src="images/BookStore .png" alt="logo"></a>
                         </div>
 
                     </div>
@@ -96,14 +96,10 @@
 
                                         <ul>
                                             <li class="active"><a href="index.html">Home</a></li>
-                                            <li><a href="about.html">About</a></li>
-                                            <li><a href="index.html">Styles</a></li>
-                                            <li><a href="index.html">Blog</a></li>
-                                            <li><a href="index.html">Post Single</a></li>
-                                            <li><a href="index.html">Our Store</a></li>
-                                            <li><a href="index.html">Product Single</a></li>
-                                            <li><a href="index.html">Contact</a></li>
-                                            <li><a href="index.html">Thank You</a></li>
+                                            <li><a href="about.php">About</a></li>
+                                            
+                                            <li><a href="contact.php">Contact</a></li>
+                                            
                                         </ul>
 
                                     </li>
@@ -111,7 +107,7 @@
                                     <li class="menu-item"><a href="#popular-books" class="nav-link">Popular</a></li>
                                     <li class="menu-item"><a href="#special-offer" class="nav-link">Offer</a></li>
                                     <li class="menu-item"><a href="#latest-blog" class="nav-link">Articles</a></li>
-                                    <li class="menu-item"><a href="#download-app" class="nav-link">Download App</a></li>
+                                    <li class="menu-item"><a href="category.php" class="nav-link">Category</a></li>
                                 </ul>
 
                                 <div class="hamburger">
@@ -127,9 +123,42 @@
 
                 </div>
             </div>
-        </header>
+        </header><br><br>
 
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-8">
+                    <img src="images/abou1.jpg" alt="Books">
+                </div>
+                <div class="col">
+                    <h2>Welcome to BookShop, the home of great books! Whether you're a fan of fiction, science fiction,
+                        or looking for a new journey through the pages, we've got it all.</h2>
+                </div>
+            </div><br>
+            <div class="row">
+                <div class="col">
+                    <h2>With thousands of carefully selected titles, BookShop is committed to bringing you great
+                        shopping
+                        experiences and unlimited knowledge.</h2>
+                </div>
+                <div class="col-8">
+                    <img src="images/abou2.jpg" alt="Books">
+                </div>
 
+            </div><br>
+            <div class="row">
+                <div class="col-7">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966094178934!2d105.77972177397247!3d21.02882008062046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab00954decbf%3A0xdb4ee23b49ad50c8!2zRlBUIEFwdGVjaCBIw6AgTuG7mWkgLSBI4buHIHRo4buRbmcgxJHDoG8gdOG6oW8gbOG6rXAgdHLDrG5oIHZpw6puIHF14buRYyB04bq_!5e0!3m2!1svi!2s!4v1742452160528!5m2!1svi!2s"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="col">
+                    <h2>Our headquarters are at:<br> 8A Ton That Thuyet, My Dinh, Nam Tu Liem, Hanoi 100000, Vietnam<br>
+                        Hl:012345678012345678<br>Emai:nguyenVanHoang@gmail.com</h2>
+                </div>
+            </div>
+        </div><br>
 
 
 
@@ -249,3 +278,9 @@
         </footer>
 
     </div><!--header-wrap-->
+    <script src="js/jquery-1.11.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/script.js"></script>

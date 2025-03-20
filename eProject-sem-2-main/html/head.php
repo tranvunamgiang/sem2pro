@@ -52,7 +52,7 @@
                             <a href="login.php" class="user-account for-buy"><i
                                     class="icon icon-user"></i><span>Account</span></a>
                                     <a href="cartpro.php">
-									<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+									<i class="icon icon-clipboard" aria-hidden="true"></i>
 								    </a>
 
                             <div class="action-menu">
@@ -98,13 +98,9 @@
                                         <ul>
                                             <li class="active"><a href="index.php">Home</a></li>
                                             <li><a href="about.php">About</a></li>
-                                            <li><a href="index.php">Styles</a></li>
-                                            <li><a href="index.">Blog</a></li>
-                                            <li><a href="index.html">Post Single</a></li>
-                                            <li><a href="index.html">Our Store</a></li>
-                                            <li><a href="index.html">Product Single</a></li>
-                                            <li><a href="index.html">Contact</a></li>
-                                            <li><a href="index.html">Thank You</a></li>
+                                           
+                                            <li><a href="contact.php">Contact</a></li>
+                                            
                                         </ul>
 
                                     </li>
@@ -129,4 +125,9 @@
                 </div>
             </div>
         </header>
-        
+        <script src="js/jquery-1.11.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/script.js"></script>
