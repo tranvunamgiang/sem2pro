@@ -2,7 +2,7 @@
 session_start();
 require_once("./../functions/user.php");
 require_once("./../functions/order.php");
-require_once("./../functions/dbp.php"); // Kết nối tới database
+require_once("./../functions/dbp.php"); // Kết nối tới database (Đảm bảo đã tạo biến $conn)
 
 if (!is_admin()) {
     header("Location: /404notfound.php");
