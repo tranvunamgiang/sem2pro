@@ -62,8 +62,6 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="thank-you-card">
-                        
-                        
                         <div class="thank-you-content">
                             <i class="fas fa-heart heart-icon mb-4"></i>
                             <h1 class="mb-4 text-primary">Thank You!</h1>
@@ -74,7 +72,7 @@
                                 the same without amazing people like you!
                             </p>
                             
-                            <div class="social-links mt-5">
+                            <div class="social-links mt-5 mb-4">
                                 <h5 class="mb-3">Stay Connected</h5>
                                 <a href="#" class="btn btn-outline-primary mx-2">
                                     <i class="fab fa-facebook"></i>
@@ -86,6 +84,11 @@
                                     <i class="fab fa-instagram"></i>
                                 </a>
                             </div>
+
+                            <!-- Nút Trở Về Trang Chủ -->
+                            <a href="index.php" class="btn btn-primary mt-3">
+                                <i class="fas fa-home me-2"></i>Trở Về Trang Chủ
+                            </a>
                         </div>
                     </div>
                 </div>
