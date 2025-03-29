@@ -2,7 +2,7 @@
 session_start();
 require_once("./functions/user.php");
 if(currentUser() != null){
-    header("Location: /");
+    header("Location: /user-info.php");
     die();
 }
 ?>
