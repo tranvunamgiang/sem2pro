@@ -160,7 +160,7 @@
 						<div class="slider-item">
 							<div class="banner-content">
 								<h2 class="banner-title">Birds gonna be Happy</h2>
-								<p>"Life of the Wild" takes you on a journey through nature’s untamed beauty, exploring the resilience and harmony of wildlife. Discover the hidden wonders of forests, mountains, and rivers. A captivating read for nature lovers and adventurers alike.</p>
+								<p>"Birds Gonna Be Happy" – Soaring freely across the sky, the birds carry joy and aspirations, painting a vibrant picture of nature full of life.</p>
 								<div class="btn-wrap">
 									<a href="http://localhost:8888/product.php?id=36" class="btn btn-outline-accent btn-accent-arrow">Read More<i
 											class="icon icon-ns-arrow-right"></i></a>
@@ -1131,7 +1131,7 @@
 						<h5>About Us</h5>
 						<ul class="menu-list">
 							<li class="menu-item">
-								<a href="#">vision</a>
+								<a href="about.php">About Us</a>
 							</li>
 							<li class="menu-item">
 								<a href="#">articles </a>
@@ -1155,7 +1155,7 @@
 						<h5>Discover</h5>
 						<ul class="menu-list">
 							<li class="menu-item">
-								<a href="#">Home</a>
+								<a href="index.php">Home</a>
 							</li>
 							<li class="menu-item">
 								<a href="#">Books</a>
@@ -1179,7 +1179,7 @@
 						<h5>My account</h5>
 						<ul class="menu-list">
 							<li class="menu-item">
-								<a href="#">Sign In</a>
+								<a href="login.php">Sign In</a>
 							</li>
 							<li class="menu-item">
 								<a href="#">View Cart</a>
@@ -1209,7 +1209,7 @@
 								<a href="#">Suggesting edits</a>
 							</li>
 							<li class="menu-item">
-								<a href="#">Contact us</a>
+								<a href="contact.php">Contact us</a>
 							</li>
 						</ul>
 					</div>

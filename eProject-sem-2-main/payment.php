@@ -6,6 +6,7 @@ $grand_total = 0;
 $shipping = 0;
 $discount = 0;
 
+
 // Xử lý khi tăng/giảm số lượng sản phẩm
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $product_id = $_POST['product_id'];
@@ -19,6 +20,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['cart'][$product_id] = 1; // Nếu chưa có, thêm vào giỏ hàng với số lượng 1
         }
     }
+    // Kiểm tra nếu thanh toán thành công
+if (isset($_SESSION['payment_success']) && $_SESSION['payment_success'] === true) {
+  // Xóa toàn bộ giỏ hàng
+  unset($_SESSION['cart']);
+  
+  // Xóa trạng thái thanh toán thành công để tránh reset liên tục
+  unset($_SESSION['payment_success']);
+
+  echo "Giỏ hàng đã được xóa sau khi thanh toán thành công.";
+} else {
+  echo "Thanh toán chưa thành công hoặc không hợp lệ.";
+}
 
     // Giảm số lượng sản phẩm
     if (isset($_POST['decrease'])) {
@@ -72,41 +85,42 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <!-- Left -->
             <div class="col-lg-9">
             <div class="card mb-4">
+            <div class="card shadow mb-4">
                             <div class="card-header bg-primary text-white py-3">
                                 <h5 class="mb-0">Shopping Cart</h5>
                             </div>
                             <div class="card-body">
-                                <table class="table table-bordered table-striped">
-                                    <thead>
+                                <table class="table table-hover">
+                                    <thead class="table-light">
                                         <tr>
-                                            <th scope="col">#</th>
-                                            <th scope="col">Thumbnail</th>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Quantity</th>
-                                            <th scope="col">Price</th>
-                                            <th scope="col">Total </th>
-                                            <th scope="col">Delete</th>
+                                            <th>#</th>
+                                            <th>Thumbnail</th>
+                                            <th>Name</th>
+                                            <th>Qty</th>
+                                            <th>Price</th>
+                                            <th>Total</th>
+                                            <th>Delete</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach($items as $index=>$item): ?>
+                                        <?php foreach ($items as $index => $item): ?>
                                             <?php $grand_total += $item["price"] * $item["buy_qty"]; ?>
                                             <tr>
-                                                <th scope="row"><?php echo $index + 1; ?></th>
-                                                <td><img src="<?php echo $item["thumbnail"];?>" width="80"/></td>
-                                                <td><?php echo $item["NAME"];?></td>
+                                                <th><?php echo $index + 1; ?></th>
+                                                <td><img src="<?php echo $item["thumbnail"]; ?>" class="img-thumbnail" width="80" /></td>
+                                                <td><?php echo $item["NAME"]; ?></td>
                                                 <td>
                                                     <form method="post" class="d-flex align-items-center">
                                                         <input type="hidden" name="product_id" value="<?php echo $item['id']; ?>">
-                                                        <button type="submit" name="decrease" class="btn btn-danger btn-sm">-</button>
-                                                        <input type="text" name="qty" value="<?php echo $item['buy_qty']; ?>" class="form-control mx-2" style="width: 50px; text-align: center;" readonly>
-                                                        <button type="submit" name="increase" class="btn btn-success btn-sm">+</button>
+                                                        <button type="submit" name="decrease" class="btn btn-outline-danger btn-sm">-</button>
+                                                        <input type="text" name="qty" value="<?php echo $item['buy_qty']; ?>" class="form-control mx-2 text-center" style="width: 50px;" readonly>
+                                                        <button type="submit" name="increase" class="btn btn-outline-success btn-sm">+</button>
                                                     </form>
                                                 </td>
-                                                <td><?php echo $item["price"];?></td>
-                                                <td><?php echo $item["price"] * $item["buy_qty"];?></td>
+                                                <td>$<?php echo number_format($item["price"], 2); ?></td>
+                                                <td>$<?php echo number_format($item["price"] * $item["buy_qty"], 2); ?></td>
                                                 <td>
-                                                    <form method="post" style="display: inline;">
+                                                    <form method="post">
                                                         <input type="hidden" name="product_id" value="<?php echo $item['id']; ?>">
                                                         <button type="submit" name="remove" class="btn btn-link text-danger p-0" style="font-size: 1.5rem;">&times;</button>
                                                     </form>
@@ -117,42 +131,70 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 </table>
                             </div>
                         </div>
+                        </div>
 
-              <!-- Thông tin người dùng (Customer Information) với Bootstrap -->
-              <h4>Customer Information</h4>
-              <form action="/place_order.php" method="post" id="orderForm" onsubmit="return validateForm()">
-      <table class="table table-bordered">
-        <tbody>
-          <tr>
-            <td><strong>Full Name</strong></td>
-            <td>
-              <input type="text" id="customer_name" name="customer_name" class="form-control" placeholder="Enter Full Name" oninput="validateName()">
-              <small id="nameError" style="color:red;"></small>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Email</strong></td>
-            <td>
-              <input type="text" id="email" name="email" class="form-control" placeholder="Enter Email" oninput="validateEmail()">
-              <small id="emailError" style="color:red;"></small>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Shipping Address</strong></td>
-            <td>
-              <input type="text" id="shipping_address" name="shipping_address" class="form-control" placeholder="Enter Shipping Address" oninput="validateAddress()">
-              <small id="addressError" style="color:red;"></small>
-            </td>
-          </tr>
-          <tr>
-            <td><strong>Telephone</strong></td>
-            <td>
-              <input type="text" id="telephone" name="telephone" class="form-control" placeholder="Enter Telephone" oninput="validateTelephone()">
-              <small id="telephoneError" style="color:red;"></small>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+                        
+<form action="/place_order.php" method="post" id="orderForm" onsubmit="return validateForm()">
+    <div class="card border-0 shadow">
+        <div class="card-header bg-custom-header text-white py-3">
+            <h5 class="mb-0"><i class="fas fa-user"></i> Customer Information</h5>
+        </div>
+        <div class="card-body bg-custom-body">
+            <div class="mb-3">
+                <label for="customer_name" class="form-label"><strong>Full Name</strong></label>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <input type="text" id="customer_name" name="customer_name" class="form-control" placeholder="Enter Full Name" oninput="validateName()">
+                </div>
+                <small id="nameError" class="text-danger"></small>
+            </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label"><strong>Email</strong></label>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email" oninput="validateEmail()">
+                </div>
+                <small id="emailError" class="text-danger"></small>
+            </div>
+
+            <div class="mb-3">
+                <label for="shipping_address" class="form-label"><strong>Shipping Address</strong></label>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                    <input type="text" id="shipping_address" name="shipping_address" class="form-control" placeholder="Enter Shipping Address" oninput="validateAddress()">
+                </div>
+                <small id="addressError" class="text-danger"></small>
+            </div>
+
+            <div class="mb-3">
+                <label for="telephone" class="form-label"><strong>Telephone</strong></label>
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                    <input type="text" id="telephone" name="telephone" class="form-control" placeholder="Enter Telephone" oninput="validateTelephone()">
+                </div>
+                <small id="telephoneError" class="text-danger"></small>
+            </div>
+        </div>
+    </div>
+
+
+<style>
+    .bg-custom-header {
+        background-color: #A98073 !important; /* Màu giống Shopping Cart */
+        color: white;
+    }
+    .bg-custom-body {
+        background-color: #F8F9FA; /* Màu nền nhạt hơn cho phần body */
+    }
+    .input-group-text, .form-control {
+        height: 48px; /* Đồng bộ chiều cao */
+    }
+    .card {
+        border-radius: 8px; /* Bo góc cho đẹp hơn */
+    }
+</style>
+
     
               
 

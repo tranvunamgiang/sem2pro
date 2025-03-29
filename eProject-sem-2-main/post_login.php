@@ -44,7 +44,7 @@ $_SESSION["user"] = [
 
 // Chuyển hướng và dừng script ngay lập tức
 if ($user["role"] === "ADMIN") {
-    header("Location: http://localhost:8888/admin");
+    header("Location: /admin/index.php");
 } else {
     header("Location: http://localhost:8888/");
 }

@@ -8,6 +8,18 @@ $email = $_POST["email"];
 $telephone = $_POST["telephone"];
 $shipping_address = $_POST["shipping_address"];
 $payment_method = $_POST["payment_method"];
+// Kiểm tra nếu thanh toán thành công
+if (isset($_SESSION['payment_success']) && $_SESSION['payment_success'] === true) {
+    // Xóa toàn bộ giỏ hàng
+    unset($_SESSION['cart']);
+    
+    // Xóa trạng thái thanh toán thành công để tránh reset liên tục
+    unset($_SESSION['payment_success']);
+
+    echo "Giỏ hàng đã được xóa sau khi thanh toán thành công.";
+} else {
+    echo "Thanh toán chưa thành công hoặc không hợp lệ.";
+}
 
 
 $items = getCartItems();

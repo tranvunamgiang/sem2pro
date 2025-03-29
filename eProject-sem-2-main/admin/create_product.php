@@ -15,7 +15,7 @@
 <body>
     <main>
         <div class="row">
-        <?php include_once("./../html/admin_aside.php");?>
+        
             <article class="col">
                 <h1>Create new product</h1>
                 <form action="/admin/save_product.php" method="post" enctype="multipart/form-data"> // moi day duoc cac file dang khac len duoc 
@@ -56,4 +56,6 @@
         </div>
     </main>
 </body>
+<?php include_once("./../html/footer.php");?>
 </html>
+<?php include_once("./../html/footer.php");?>

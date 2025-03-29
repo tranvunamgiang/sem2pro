@@ -90,7 +90,7 @@
                         <nav id="navbar">
                             <div class="main-menu stellarnav">
                                 <ul class="menu-list">
-                                    <li class="menu-item active"><a href="index.html">Home</a></li>
+                                    <li class="menu-item active"><a href="index.php">Home</a></li>
                                     <li class="menu-item has-sub">
                                         <a href="#pages" class="nav-link">Pages</a>
 
@@ -186,7 +186,7 @@
                             <h5>About Us</h5>
                             <ul class="menu-list">
                                 <li class="menu-item">
-                                    <a href="#">vision</a>
+                                    <a href="#">About Us</a>
                                 </li>
                                 <li class="menu-item">
                                     <a href="#">articles </a>
@@ -210,7 +210,7 @@
                             <h5>Discover</h5>
                             <ul class="menu-list">
                                 <li class="menu-item">
-                                    <a href="#">Home</a>
+                                    <a href="index.php">Home</a>
                                 </li>
                                 <li class="menu-item">
                                     <a href="#">Books</a>
@@ -234,7 +234,7 @@
                             <h5>My account</h5>
                             <ul class="menu-list">
                                 <li class="menu-item">
-                                    <a href="#">Sign In</a>
+                                    <a href="login.php">Sign In</a>
                                 </li>
                                 <li class="menu-item">
                                     <a href="#">View Cart</a>
@@ -264,7 +264,7 @@
                                     <a href="#">Suggesting edits</a>
                                 </li>
                                 <li class="menu-item">
-                                    <a href="#">Contact us</a>
+                                    <a href="contact.php">Contact us</a>
                                 </li>
                             </ul>
                         </div>
